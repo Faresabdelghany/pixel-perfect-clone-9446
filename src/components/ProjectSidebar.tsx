@@ -122,19 +122,22 @@ export function ProjectSidebar({ collapsed = false }: SidebarProps) {
                   onClick={() => setTeamProjectOpen(!teamProjectOpen)}
                 >
                   <Circle className="w-3 h-3 text-muted-foreground" />
-                  <span className="text-foreground text-sm flex-1">Team</span>
+                  <span className="text-foreground text-sm flex-1">Team Project</span>
                 </div>
                 
                 {teamProjectOpen && (
-                  <div className="ml-6 pl-4">
-                    <div className="flex flex-col gap-2 py-2">
-                      <div className="w-8 h-8 rounded-full bg-task-blue border-2 border-sidebar-bg overflow-hidden">
-                        <img src={walterAvatar} alt="Team member" className="w-full h-full object-cover" />
-                      </div>
-                      <div className="w-8 h-8 rounded-full bg-task-pink border-2 border-sidebar-bg"></div>
-                      <div className="w-8 h-8 rounded-full bg-task-green border-2 border-sidebar-bg"></div>
-                      <div className="w-8 h-8 rounded-full bg-task-yellow border-2 border-sidebar-bg"></div>
-                      <div className="w-8 h-8 rounded-full bg-secondary border-2 border-sidebar-bg"></div>
+                  <div className="ml-6 space-y-1 border-l border-muted-foreground/20 pl-4">
+                    <div className="flex items-center gap-3 px-3 py-1 rounded-lg hover:bg-sidebar-hover transition-colors cursor-pointer">
+                      <Circle className="w-2 h-2 text-muted-foreground" />
+                      <span className="text-muted-foreground text-sm">Website</span>
+                    </div>
+                    <div className="flex items-center gap-3 px-3 py-1 rounded-lg hover:bg-sidebar-hover transition-colors cursor-pointer">
+                      <Circle className="w-2 h-2 text-muted-foreground" />
+                      <span className="text-muted-foreground text-sm">Apps</span>
+                    </div>
+                    <div className="flex items-center gap-3 px-3 py-1 rounded-lg hover:bg-sidebar-hover transition-colors cursor-pointer">
+                      <Circle className="w-2 h-2 text-muted-foreground" />
+                      <span className="text-muted-foreground text-sm">Dribbble Shot</span>
                     </div>
                   </div>
                 )}
